@@ -1,0 +1,123 @@
+:root {
+    --transparent-white: #FFFFFFCC;
+    --main-background-color: #002;
+    --shape-background-color-first: #F09;
+    --shape-background-color-second: #3023AE;
+    --text-font: 'M PLUS Rounded 1c', sans-serif;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+main {
+    height: 100%;
+}
+
+main {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-background-color);
+}
+
+.page-title {
+    margin: 0 0 1.5rem;
+    font-family: var(--text-font);
+    color: var(--transparent-white)
+}
+
+.generator {
+    width: 60vmin;
+    height: 60vmin;
+    border: 2px dashed rgba(255, 255, 255, .5);
+}
+
+.shape {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--shape-background-color);
+    background-image: linear-gradient(45deg, var(--shape-background-color-second), var(--shape-background-color-first));
+}
+
+.pin {
+    position: absolute;
+    display: block;
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: #FFF;
+    border: 2px solid #000;
+    transition: 100ms ease-in-out ;
+}
+
+.pin:hover {
+    background-color: aqua;
+}
+
+.one {
+    top: calc(-1.125rem / 2);
+    left: calc(-1.125rem / 2);
+}
+
+.two {
+    top: calc(-1.125rem / 2);
+    right: calc(-1.125rem / 2);
+}
+
+.three {
+    bottom:calc( -1.125rem / 2);
+    right: calc(-1.125rem / 2);
+}
+
+.four {
+    bottom: calc(-1.125rem / 2);
+    left: calc(-1.125rem / 2);
+}
+
+.result {
+    margin-top: 1.5rem;
+    margin-inline: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.border-radius-text {
+    margin-right: 1.3rem;
+    font-family: var(--text-font);
+    font-weight: 300;
+    color: var(--transparent-white);
+}
+
+.radius-output {
+    padding: .5rem .625rem;
+    font-family: var(--text-font);
+    white-space: 1rem;
+    font-weight: 400;
+    color: #000;
+    background-color: var(--transparent-white);
+}
+
+.copy-result {
+    padding: .5rem 1rem;
+    background-color: var(--shape-background-color-first);
+    font-family: var(--text-font);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--transparent-white);
+    border: none;
+    transition: 250ms ease-in-out;
+}
+
+.copy-result:hover{
+    background-color: var(--shape-background-color-second);
+    cursor: pointer;
+}
